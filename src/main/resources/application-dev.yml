@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: booking
+  datasource:
+    url: jdbc:postgresql://localhost:5432/booking
+    username: postgres
+    password: postdev
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+## CORS configs
+cors:
+  allowed-origins:
+    - http://localhost:4201
+    - http://localhost:4200
+
+## Hotel client service
+hotel:
+  service:
+    url: http://localhost:8081/api/v1/hotels
+
+## Room client service
+room:
+  service:
+    url: http://localhost:8081/api/v1/hotels
